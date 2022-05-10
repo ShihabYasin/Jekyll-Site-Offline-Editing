@@ -8,7 +8,7 @@ build:   # 1. BUILD DOCKER IMAGE
 
 run:     # 2. RUN DOCKER CONTAINER
 	#docker run -d --rm -p 4000:4000 --name $(CONTAINER_NAME) $(IMAGE_NAME)
-	docker run --rm -p 4000:4000 -v /home/tigerit/MyGithub/old_shihabyasin.github.io/_posts:/home/user/my-awesome-site/_posts --name $(CONTAINER_NAME) $(IMAGE_NAME)
+	docker run --rm -p 4000:4000 -v your_dir_absolute_path/_posts:/home/user/my-awesome-site/_posts --name $(CONTAINER_NAME) $(IMAGE_NAME)
 
 stop:    # 3. STOP DOCKER CONTAINER
 	docker stop $(CONTAINER_NAME)
